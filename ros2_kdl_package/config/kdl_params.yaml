@@ -1,0 +1,12 @@
+ros2_kdl_node:
+  ros__parameters:
+    traj_duration: 10.0
+    acc_duration: 2.0
+    total_time: 20.0
+    trajectory_len: 200
+    # Gains for the controller
+    Kp: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
+    # Desired end position for Part 1
+    end_position: [0.5, 0.0, 0.5]
+    # Mode: "velocity" (Part 1) or "look_at_point" (Part 2)
+    cmd_interface: "look_at_point"
