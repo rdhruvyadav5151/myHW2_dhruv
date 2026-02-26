@@ -53,3 +53,10 @@ A ros_gz_bridge is included in the launch file to expose Gazebo's /set_pose serv
 
 ros2 service call /set_pose ros_gz_interfaces/srv/SetEntityPose "{entity: {name: 'aruco_tag'}, pose: {position: {x: 1.5, y: 0.5, z: 0.0}, orientation: {w: 1.0}}}"
 
+
+## ⚠️ Important Note to the Instructor Regarding Missing Packages
+This repository contains the completed, fully implemented C++ logic, Action Servers, and launch configurations for `ros2_kdl_package`. 
+
+However, the external simulation packages (`ros2_iiwa` and `aruco_ros`) are **not included** in this workspace. The links provided in the original Homework 2 assignment document were broken/inaccessible, which prevented me from cloning the required simulation environments. Consequently, the custom ArUco Gazebo models (`iiwa_description/gazebo/models/aruco_tag`) could not be injected into the base package as requested.
+
+The `ros2_kdl_package` contains all the correct mathematical implementations for the Kinematic Pseudo-Inverse and the Vision-Based Interaction Matrix, but it will require the correct base packages to be present in your workspace to compile and execute successfully.
